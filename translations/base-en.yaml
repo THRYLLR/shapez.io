@@ -470,6 +470,11 @@ buildings:
             name: &wire Wire
             description: Allows you to transport energy
 
+    distributor: # In development, temporary translation to avoid crashes.
+        default:
+            name: &distributor Distributor
+            description: (In development) Similar to the balancer, it accepts inputs from any of its slots and directs it out all others.
+
     miner: # Internal name for the Extractor
         default:
             name: &miner Extractor
@@ -630,6 +635,10 @@ storyRewards:
     reward_storage:
         title: Storage Buffer
         desc: You have unlocked a variant of the <strong>trash</strong> - It allows you to store items up to a given capacity!
+
+    reward_distributor:
+        title: Distributor
+        dest: You have unlocked the Distributor - input can be directed to any of its four slots and exit out all other unused slots!
 
     reward_freeplay:
         title: Freeplay

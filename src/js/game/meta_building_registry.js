@@ -13,6 +13,7 @@ import { MetaHubBuilding } from "./buildings/hub";
 import { MetaEnergyGenerator } from "./buildings/energy_generator";
 import { MetaWireBaseBuilding } from "./buildings/wire_base";
 import { MetaAdvancedProcessorBuilding } from "./buildings/advanced_processor";
+import { MetaDistributorBuilding } from "./buildings/distributor";
 import { MetaBeltBuilding } from "./buildings/belt";
 
 export function initMetaBuildingRegistry() {
@@ -24,6 +25,7 @@ export function initMetaBuildingRegistry() {
     gMetaBuildingRegistry.register(MetaMixerBuilding);
     gMetaBuildingRegistry.register(MetaPainterBuilding);
     gMetaBuildingRegistry.register(MetaTrashBuilding);
+    gMetaBuildingRegistry.register(MetaDistributorBuilding);
     gMetaBuildingRegistry.register(MetaBeltBuilding);
     gMetaBuildingRegistry.register(MetaUndergroundBeltBuilding);
     gMetaBuildingRegistry.register(MetaHubBuilding);

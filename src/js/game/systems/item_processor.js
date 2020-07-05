@@ -134,6 +134,49 @@ export class ItemProcessorSystem extends GameSystemWithFilter {
                 break;
             }
 
+            //DISTRIBUTOR (In development)
+            case enumItemProcessorTypes.distributor: {
+                trackProduction = false;
+                const entityAcceptor = entity.components.ItemAcceptor;
+                const entityEjector = entity.components.ItemEjector;
+
+                let availableSlots = [];
+
+                /*let matchingAE = {};
+                for (var i = 0; i < 4; i++) {
+                    if (entityAcceptor.slots[i].directions[0] == entityEjector.slots[i].direction) {
+                        
+                    }
+                }
+                //let availableSlots = entityEjector.slots.length;
+                console.log(processorComp);
+                console.log(entity);
+
+                //for (const [i, v] of entityAcceptor.slots.entries())
+                //    for (const [i2, v2] of entityEjector.slots.entries()) if (v.directions[0] == v2.direction && processorComp.inputSlots[i].sourceSlot)
+                for (let i = 0; i < items.length; ++i) {
+                    outItems.push({
+                        item: items[i].item,
+                        preferredSlot:
+                            ((processorComp.nextOutputSlot++ % availableSlots) + i) % availableSlots,
+                    });
+                }*/
+                for (let i = 0; i < entityEjector.slots.length; i++) {
+                    if (entityEjector.canEjectOnSlot(i)) {
+                        availableSlots.push(i);
+                    }
+                }
+
+                for (let i = 0; i < items.length; ++i) {
+                    outItems.push({
+                        item: items[i].item,
+                        preferredSlot: availableSlots[i <= 3 ? i : (i % 3) - 1],
+                    });
+                }
+
+                break;
+            }
+
             // CUTTER
             case enumItemProcessorTypes.cutter: {
                 const inputItem = /** @type {ShapeItem} */ (items[0].item);

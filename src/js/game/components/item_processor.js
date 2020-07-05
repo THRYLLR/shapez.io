@@ -17,6 +17,7 @@ export const enumItemProcessorTypes = {
     painterDouble: "painterDouble",
     painterQuad: "painterQuad",
     advancedProcessor: "advancedProcessor",
+    distributor: "distributor",
     hub: "hub",
 };
 

@@ -22,6 +22,7 @@ export const enumHubGoalRewards = {
     reward_painter_double: "reward_painter_double",
     reward_painter_quad: "reward_painter_quad",
     reward_storage: "reward_storage",
+    reward_distributor: "reward_distributor",
 
     reward_wires: "reward_wires",
 
@@ -161,7 +162,14 @@ export const tutorialGoals = [
         reward: enumHubGoalRewards.reward_painter_quad,
     },
 
-    // 18
+    // 18 (In development)
+    {
+        shape: "WpCcWpCc:CyWgCyWg",
+        required: 1, //change
+        reward: enumHubGoalRewards.reward_distributor,
+    },
+
+    // 19 (formerly 18)
     {
         shape: finalGameShape,
         required: 250000,

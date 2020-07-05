@@ -9,6 +9,7 @@ import { MetaSplitterBuilding } from "../../buildings/splitter";
 import { MetaStackerBuilding } from "../../buildings/stacker";
 import { MetaTrashBuilding } from "../../buildings/trash";
 import { MetaUndergroundBeltBuilding } from "../../buildings/underground_belt";
+import { MetaDistributorBuilding } from "../../buildings/distributor";
 import { enumLayer } from "../../root";
 import { HUDBaseToolbar } from "./base_toolbar";
 import { MetaAdvancedProcessorBuilding } from "../../buildings/advanced_processor";
@@ -16,6 +17,7 @@ import { MetaAdvancedProcessorBuilding } from "../../buildings/advanced_processo
 const supportedBuildings = [
     MetaBeltBaseBuilding,
     MetaSplitterBuilding,
+    MetaDistributorBuilding,
     MetaUndergroundBeltBuilding,
     MetaMinerBuilding,
     MetaCutterBuilding,
